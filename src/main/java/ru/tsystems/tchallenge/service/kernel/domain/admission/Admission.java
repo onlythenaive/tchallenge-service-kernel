@@ -1,5 +1,6 @@
 package ru.tsystems.tchallenge.service.kernel.domain.admission;
 
+import ru.tsystems.tchallenge.service.kernel.domain.essay.Essay;
 import ru.tsystems.tchallenge.service.kernel.domain.forum.Forum;
 import ru.tsystems.tchallenge.service.kernel.domain.maturity.Maturity;
 import ru.tsystems.tchallenge.service.kernel.domain.shared.Sporadic;
@@ -24,6 +25,15 @@ public class Admission extends Sporadic {
 
     @ManyToOne
     private Specialization specialization;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Essay essay;
+
+    @Column
+    private Integer challengeRequested;
+
+    @Column
+    private Integer essayProvided;
 
     public String getEmail() {
         return email;
@@ -63,5 +73,29 @@ public class Admission extends Sporadic {
 
     public void setSpecialization(Specialization specialization) {
         this.specialization = specialization;
+    }
+
+    public Essay getEssay() {
+        return essay;
+    }
+
+    public void setEssay(Essay essay) {
+        this.essay = essay;
+    }
+
+    public Integer getChallengeRequested() {
+        return challengeRequested;
+    }
+
+    public void setChallengeRequested(Integer challengeRequested) {
+        this.challengeRequested = challengeRequested;
+    }
+
+    public Integer getEssayProvided() {
+        return essayProvided;
+    }
+
+    public void setEssayProvided(Integer essayProvided) {
+        this.essayProvided = essayProvided;
     }
 }

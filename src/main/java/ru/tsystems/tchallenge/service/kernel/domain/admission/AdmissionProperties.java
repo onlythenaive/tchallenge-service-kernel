@@ -1,24 +1,17 @@
 package ru.tsystems.tchallenge.service.kernel.domain.admission;
 
-import java.time.Instant;
+import ru.tsystems.tchallenge.service.kernel.domain.essay.EssayProperties;
 
-public class AdmissionInfo {
+public class AdmissionProperties {
 
-    private String id;
     private String shortname;
     private String email;
     private String forum;
+    private String maturity;
+    private String specialization;
+    private EssayProperties essay;
     private Boolean challengeRequested;
     private Boolean essayProvided;
-    private String createdAt;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getShortname() {
         return shortname;
@@ -44,12 +37,28 @@ public class AdmissionInfo {
         this.forum = forum;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
+    public String getMaturity() {
+        return maturity;
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
+    public void setMaturity(String maturity) {
+        this.maturity = maturity;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public EssayProperties getEssay() {
+        return essay;
+    }
+
+    public void setEssay(EssayProperties essay) {
+        this.essay = essay;
     }
 
     public Boolean getChallengeRequested() {

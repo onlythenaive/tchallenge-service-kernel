@@ -6,6 +6,8 @@ import ru.tsystems.tchallenge.service.kernel.domain.shared.Sporadic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import java.util.UUID;
 
 @Entity
 public class Resolution extends Sporadic {
@@ -20,15 +22,17 @@ public class Resolution extends Sporadic {
         return secret;
     }
 
-    public void setSecret(String secret) {
-        this.secret = secret;
-    }
-
     public Admission getAdmission() {
         return admission;
     }
 
     public void setAdmission(Admission admission) {
         this.admission = admission;
+    }
+
+    @PrePersist
+    protected void prePersist() {
+        super.prePersist();
+        secret = UUID.randomUUID().toString();
     }
 }

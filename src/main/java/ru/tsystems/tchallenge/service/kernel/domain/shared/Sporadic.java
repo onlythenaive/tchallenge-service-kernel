@@ -26,7 +26,7 @@ public abstract class Sporadic {
     }
 
     @PrePersist
-    private void prePersist() {
+    protected void prePersist() {
         id = UUID.randomUUID().toString();
         createdAt = Instant.now();
     }

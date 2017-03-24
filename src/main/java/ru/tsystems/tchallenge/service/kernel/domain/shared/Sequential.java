@@ -23,7 +23,7 @@ public abstract class Sequential {
     }
 
     @PrePersist
-    private void prePersist() {
+    protected void prePersist() {
         createdAt = Instant.now();
     }
 }
