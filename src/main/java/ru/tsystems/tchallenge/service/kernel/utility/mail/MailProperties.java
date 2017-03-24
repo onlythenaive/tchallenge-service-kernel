@@ -1,4 +1,4 @@
-package ru.tsystems.tchallenge.service.kernel.mail;
+package ru.tsystems.tchallenge.service.kernel.utility.mail;
 
 public class MailProperties {
 

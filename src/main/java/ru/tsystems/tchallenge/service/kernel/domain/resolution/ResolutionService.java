@@ -3,8 +3,8 @@ package ru.tsystems.tchallenge.service.kernel.domain.resolution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.tsystems.tchallenge.service.kernel.mail.MailProperties;
-import ru.tsystems.tchallenge.service.kernel.mail.MailService;
+import ru.tsystems.tchallenge.service.kernel.utility.mail.MailProperties;
+import ru.tsystems.tchallenge.service.kernel.utility.mail.MailService;
 
 @Service
 @Transactional

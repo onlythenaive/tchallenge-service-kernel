@@ -1,4 +1,4 @@
-package ru.tsystems.tchallenge.service.kernel.mail;
+package ru.tsystems.tchallenge.service.kernel.utility.mail;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
