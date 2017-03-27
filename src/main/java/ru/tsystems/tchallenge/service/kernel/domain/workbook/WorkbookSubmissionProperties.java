@@ -1,14 +1,18 @@
 package ru.tsystems.tchallenge.service.kernel.domain.workbook;
 
+import ru.tsystems.tchallenge.service.kernel.domain.assignment.AssignmentSubmissionProperties;
+
+import java.util.Collection;
+
 public class WorkbookSubmissionProperties {
 
-    private String someField;
+    private Collection<AssignmentSubmissionProperties> assignmentSubmissions;
 
-    public String getSomeField() {
-        return someField;
+    public Collection<AssignmentSubmissionProperties> getAssignmentSubmissions() {
+        return assignmentSubmissions;
     }
 
-    public void setSomeField(String someField) {
-        this.someField = someField;
+    public void setAssignmentSubmissions(Collection<AssignmentSubmissionProperties> assignmentSubmissions) {
+        this.assignmentSubmissions = assignmentSubmissions;
     }
 }

@@ -16,7 +16,7 @@ public class ResolutionService {
     @Autowired
     private ResolutionMapper resolutionMapper;
 
-    @Autowired
+//    @Autowired
     private MailService mailService;
 
     public ResolutionInfo getById(String id) {
@@ -27,7 +27,7 @@ public class ResolutionService {
         Resolution resolution = resolutionMapper.intoResolution(resolutionProperties);
         resolutionRepository.save(resolution);
         ResolutionInfo resolutionInfo = resolutionMapper.intoResolutionInfo(resolution);
-        mailResolutionInfo(resolutionInfo);
+        //mailResolutionInfo(resolutionInfo);
         return resolutionInfo;
     }
 

@@ -4,8 +4,17 @@ import ru.tsystems.tchallenge.service.kernel.domain.task.TaskInfo;
 
 public class AssignmentInfo {
 
+    private String id;
     private Long lineup;
     private TaskInfo task;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Long getLineup() {
         return lineup;

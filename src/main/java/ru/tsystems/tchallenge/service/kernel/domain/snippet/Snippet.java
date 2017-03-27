@@ -11,11 +11,33 @@ public class Snippet extends Sporadic {
     @Column
     private Integer lineup;
 
+    @Column
+    private String content;
+
+    @Column
+    private String style;
+
     public Integer getLineup() {
         return lineup;
     }
 
     public void setLineup(Integer lineup) {
         this.lineup = lineup;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 }

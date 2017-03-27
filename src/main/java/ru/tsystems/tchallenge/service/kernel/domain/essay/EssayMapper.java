@@ -18,4 +18,16 @@ public class EssayMapper {
         essay.setWebsite(essayProperties.getWebsite());
         return essay;
     }
+
+    public EssayProperties intoInfo(Essay essay) {
+        EssayProperties essayInfo = new EssayProperties();
+        essayInfo.setBitbucket(essay.getBitbucket());
+        essayInfo.setFirstname(essay.getFirstname());
+        essayInfo.setGithub(essay.getGithub());
+        essayInfo.setLastname(essay.getLastname());
+        essayInfo.setLinkedin(essay.getLinkedin());
+        essayInfo.setPortfolio(essay.getPortfolio());
+        essayInfo.setWebsite(essay.getWebsite());
+        return essayInfo;
+    }
 }

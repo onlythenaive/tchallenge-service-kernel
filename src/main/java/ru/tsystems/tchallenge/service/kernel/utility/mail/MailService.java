@@ -5,10 +5,10 @@ import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class MailService {
 
-    @Autowired
+//    @Autowired
     private MailSender mailSender;
 
     public void send(MailProperties properties) {

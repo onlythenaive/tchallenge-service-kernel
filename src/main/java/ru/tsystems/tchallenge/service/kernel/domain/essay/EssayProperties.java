@@ -2,6 +2,7 @@ package ru.tsystems.tchallenge.service.kernel.domain.essay;
 
 public class EssayProperties {
 
+    private String email;
     private String firstname;
     private String lastname;
     private String linkedin;
@@ -9,6 +10,14 @@ public class EssayProperties {
     private String website;
     private String github;
     private String bitbucket;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getFirstname() {
         return firstname;

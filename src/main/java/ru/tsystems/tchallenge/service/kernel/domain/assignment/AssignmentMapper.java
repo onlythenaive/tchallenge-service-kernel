@@ -15,6 +15,7 @@ public class AssignmentMapper extends Mapper {
 
     public AssignmentInfo intoAssignmentInfo(Assignment assignment) {
         AssignmentInfo assignmentInfo = new AssignmentInfo();
+        assignmentInfo.setId(assignment.getId());
         assignmentInfo.setLineup(assignment.getLineup());
         assignmentInfo.setTask(taskMapper.intoTaskInfo(assignment.getTask()));
         return assignmentInfo;

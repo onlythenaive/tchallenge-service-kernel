@@ -3,6 +3,7 @@ package ru.tsystems.tchallenge.service.kernel.domain.admission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.tsystems.tchallenge.service.kernel.domain.resolution.ResolutionInfo;
 import ru.tsystems.tchallenge.service.kernel.domain.resolution.ResolutionProperties;
 import ru.tsystems.tchallenge.service.kernel.domain.resolution.ResolutionService;
 import ru.tsystems.tchallenge.service.kernel.utility.batch.BatchProcessor;
@@ -38,8 +39,12 @@ public class AdmissionService {
     private void batchCreateResolution(AdmissionInfo admissionInfo) {
         ResolutionProperties resolutionProperties = new ResolutionProperties();
         resolutionProperties.setAdmission(admissionInfo.getId());
+        ResolutionInfo resolutionInfo = resolutionService.create(resolutionProperties);
+        admissionInfo.setResolution(resolutionInfo.getId());
+        /*
         batchProcessor.submit(() -> {
             resolutionService.create(resolutionProperties);
         });
+        */
     }
 }

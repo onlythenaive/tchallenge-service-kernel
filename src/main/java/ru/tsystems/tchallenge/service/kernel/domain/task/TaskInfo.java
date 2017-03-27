@@ -1,5 +1,6 @@
 package ru.tsystems.tchallenge.service.kernel.domain.task;
 
+import ru.tsystems.tchallenge.service.kernel.domain.snippet.SnippetInfo;
 import ru.tsystems.tchallenge.service.kernel.domain.solution.SolutionOptionInfo;
 
 import java.util.Collection;
@@ -9,6 +10,7 @@ public class TaskInfo {
     private String title;
     private String introduction;
     private String question;
+    private Collection<SnippetInfo> snippets;
     private Collection<SolutionOptionInfo> solutionOptions;
     private Collection<String> categories;
     private Integer complexity;
@@ -37,6 +39,14 @@ public class TaskInfo {
 
     public void setQuestion(String question) {
         this.question = question;
+    }
+
+    public Collection<SnippetInfo> getSnippets() {
+        return snippets;
+    }
+
+    public void setSnippets(Collection<SnippetInfo> snippets) {
+        this.snippets = snippets;
     }
 
     public Collection<SolutionOptionInfo> getSolutionOptions() {

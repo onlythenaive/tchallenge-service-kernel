@@ -11,6 +11,7 @@ public class AdmissionInfo {
     private Boolean challengeRequested;
     private Boolean essayProvided;
     private String createdAt;
+    private String resolution;
 
     public String getId() {
         return id;
@@ -66,5 +67,13 @@ public class AdmissionInfo {
 
     public void setEssayProvided(Boolean essayProvided) {
         this.essayProvided = essayProvided;
+    }
+
+    public String getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(String resolution) {
+        this.resolution = resolution;
     }
 }
